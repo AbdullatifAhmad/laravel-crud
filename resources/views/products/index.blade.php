@@ -33,11 +33,12 @@
                 <div>
                     <ul class="table-filter-list">
                         <li>
-                            <p class="table-filter-link link-active">All</p>
+                            <p class="table-filter-link link-active"><a href="{{ route('products.index') }}">All</a></p>
                         </li>
                     </ul>
                 </div>
             </div>
+
             <form method="GET" action="{{ route('products.index')}}" accept-charset="UTF-8" role="search">
                 <div class="table-search">   
                     <div>

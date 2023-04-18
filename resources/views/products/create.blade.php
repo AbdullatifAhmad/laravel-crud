@@ -6,7 +6,6 @@
             @csrf
             <div class="titlebar">
                 <h1>Add Product</h1>
-                <button>Save</button>
             </div>
             @if ($errors->any())
                 <div class="alert alert-danger">
@@ -30,7 +29,7 @@
                 <div>
                     <label>Category</label>
                     <select  name="category" >
-                        @foreach (json_decode('{"Proudct1":"Product 1","Product2":"Product 2","Product3":"Product 3","Product4":"Product 4"}',true ) as $optionKey => $optionValue)
+                        @foreach (json_decode('{"Product1":"Product 1","Product2":"Product 2","Product3":"Product 3","Product4":"Product 4"}',true ) as $optionKey => $optionValue)
                         <option value="{{$optionKey}}" >{{ $optionValue }}</option>
                         @endforeach
                     </select>
@@ -45,6 +44,7 @@
             <div class="titlebar">
                 <h1></h1>
                 <button>Save</button>
+                
             </div>
         </form>
     </section>

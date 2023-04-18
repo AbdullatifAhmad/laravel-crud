@@ -31,7 +31,7 @@
                 <div>
                     <label>Category</label>
                     <select  name="category" >
-                        @foreach (json_decode('{"Proudct1":"Product 1","Product2":"Product 2","Product3":"Product 3","Product4":"Product 4"}',true ) as $optionKey => $optionValue)
+                        @foreach (json_decode('{"Product1":"Product 1","Product2":"Product 2","Product3":"Product 3","Product4":"Product 4"}',true ) as $optionKey => $optionValue)
                         <option value="{{$optionKey}}" {{ (isset($product->category) && $product->category == $optionKey) ? 'selected' : '' }} >{{ $optionValue }}</option>
                         @endforeach
                     </select>
