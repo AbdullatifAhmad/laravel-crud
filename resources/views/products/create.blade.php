@@ -6,7 +6,6 @@
             @csrf
             <div class="titlebar">
                 <h1>Add Product</h1>
-                <button>Save</button>
             </div>
             @if ($errors->any())
                 <div class="alert alert-danger">

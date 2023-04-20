@@ -57,7 +57,8 @@
                 <p>Image</p>
                 <p>Name</p>
                 <p>Category</p>
-                <p>Inventory</p>
+                <p>Price</p>
+                
                 <p>Actions</p>
             </div style="display: flex">
             <div class="table-product-body">
@@ -66,7 +67,8 @@
                         <img src="{{asset('images/' . $product->image)}}"/>
                         <p>{{$product->name}}</p>
                         <p>{{$product->category}}</p>
-                        <p>{{$product->quantity}}</p>
+                        <p>{{$product->price}}</p>
+                        
                         <div>     
                             <a href="{{ route('products.edit', $product->id)}}" class="btn-link btn btn-success" style="padding-top: 4px;padding-bottom: 4px">
                                 <i class="far fa-edit"></i>
