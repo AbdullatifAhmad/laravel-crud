@@ -21,14 +21,14 @@
                 <div>
                     <label>Name</label>
                     <input type="text" name="name" value="{{ $product->name}}">
-                    <label>Description (optional)</label>
-                    <textarea cols="10" rows="5" name="description" value="{{ $product->description}}" >{{ $product->description}}</textarea>
+                    {{-- <label>Description (optional)</label>
+                    <textarea cols="10" rows="5" name="description" value="{{ $product->description}}" >{{ $product->description}}</textarea> --}}
                     <label>Add Image</label>
                     <img src="{{ asset('images/'.$product->image) }}" alt="" class="img-product" id="file-preview" />
                     <input type="hidden" name="hidden_product_image" value={{ $product->image}}>
                     <input type="file" name="image" accept="image/*" onchange="showFile(event)">
                 </div>
-                <div>
+                {{-- <div>
                     <label>Category</label>
                     <select  name="category" >
                         @foreach (json_decode('{"Product1":"Product 1","Product2":"Product 2","Product3":"Product 3","Product4":"Product 4"}',true ) as $optionKey => $optionValue)
@@ -41,7 +41,7 @@
                     <hr>
                     <label>Price</label>
                     <input type="text" name="price" value="{{ $product->price}}">
-                </div>
+                </div> --}}
             </div>
             <div class="titlebar">
                 <h1></h1>

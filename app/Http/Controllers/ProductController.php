@@ -32,12 +32,12 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required',
-            'description' => 'required',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2028',
-            'category' => 'required',
-            'quantity' => 'required',
-            'price' => 'required',
+            'name' => 'required'
+            // 'description' => 'required',
+            // 'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2028',
+            // 'category' => 'required',
+            // 'quantity' => 'required',
+            // 'price' => 'required',
         ]);
 
         $product = new Product;
@@ -46,14 +46,14 @@ class ProductController extends Controller
         request()->image->move(public_path('images'), $file_name);
 
         $product->name = $request->name;
-        $product->description = $request->description;
+        // $product->description = $request->description;
         $product->image = $file_name;
-        $product->category = $request->category;
-        $product->quantity = $request->quantity;
-        $product->price = $request->price;
+        // $product->category = $request->category;
+        // $product->quantity = $request->quantity;
+        // $product->price = $request->price;
 
         $product->save();
-        return redirect()->route('products.index')->with('success','Product created successfully.');
+        return redirect()->route('products.index')->with('success','Allergie created successfully.');
     }
 
     // function for edit product
@@ -78,14 +78,14 @@ class ProductController extends Controller
         $product = Product::find($request->hidden_id);
 
         $product->name = $request->name;
-        $product->description = $request->description;
+        // $product->description = $request->description;
         $product->image = $file_name;
-        $product->category = $request->category;
-        $product->quantity = $request->quantity;
-        $product->price = $request->price;
+        // $product->category = $request->category;
+        // $product->quantity = $request->quantity;
+        // $product->price = $request->price;
 
         $product->save();
-        return redirect()->route('products.index')->with('success','Product updated successfully.');
+        return redirect()->route('products.index')->with('success','Allergie updated successfully.');
     }
 
     // function for destory product
@@ -97,6 +97,6 @@ class ProductController extends Controller
             @unlink($image);
         }
         $product->delete();
-        return redirect('products')->with('success','Product deleted successfully.');
+        return redirect('products')->with('success','Allergie deleted successfully.');
     }
 }

@@ -3,8 +3,8 @@
 <main class="container">
     <section>
         <div class="titlebar">
-            <h1>Products</h1>
-            <a href="{{ route('products.create')}}" class="btn-link">Add Product</a>
+            <h1>Allergie</h1>
+            <a href="{{ route('products.create')}}" class="btn-link">Add Allergie</a>
         </div>
          {{-- This is the code that displays the success message --}}
         @if ($massage = Session::get('success'))
@@ -38,29 +38,31 @@
                     </ul>
                 </div>
             </div>
-
-            <form method="GET" action="{{ route('products.index')}}" accept-charset="UTF-8" role="search">
+            {{-- This is the code that displays the search bar --}}
+            {{-- <form method="GET" action="{{ route('products.index')}}" accept-charset="UTF-8" role="search">
                 <div class="table-search">   
                     <div>
                         <button class="search-select">
-                        Search Product
+                        Search Allergie
                         </button>
                         <span class="search-select-arrow">
                             <i class="fas fa-caret-down"></i>
                         </span>
                     </div>
                     <div class="relative">
-                        <input class="search-input" type="text"  placeholder="Search product..." name="search" value="{{ request('search') }}">
+                        <input class="search-input" type="text"  placeholder="Search Allergie..." name="search" value="{{ request('search') }}">
                     </div>
                 </div>
-            </form>
+            </form> --}}
+            {{-- This is the code that displays the table --}}
             <div class="table-product-head">
                 <p>Image</p>
                 <p>Name</p>
-                <p>Category</p>
-                <p>Inventory</p>
+                {{-- <p>Category</p>
+                <p>Inventory</p> --}}
                 <p>Actions</p>
             </div style="display: flex">
+            {{-- this is a table row --}}
             <div class="table-product-body">
                 @if (count($products) > 0)
                     @foreach ($products as $product)
@@ -82,7 +84,7 @@
                         </div>
                     @endforeach
                 @else
-                    <p>No products found</p>
+                    <p>No Allergies found</p>
                 @endif
 
             </div>
