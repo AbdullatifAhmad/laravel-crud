@@ -218,6 +218,20 @@
   input[type="reset"]:hover {
     background-color: var(--primary-color-dark);
   }
+
+
+  /* button for back */
+  .btn-back{
+    margin-top: 1em;
+    border: 1px solid #e0e0e0;
+    background: #e0e0e0;
+    color: var(--text-dark);
+    text-decoration: none;
+    padding: 90px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: var(--font-family);
+  }
   
   .btn-link{
     margin-top: 1em;
@@ -424,11 +438,13 @@
   
   .btn-success:hover {
   background: rgb(47, 214, 111);
-  color: white;  
+  color: white;
+  display: flex;
   }
   .btn-danger:hover {
     background: crimson;
-    color: white; 
+    color: white;
+    display: flex; 
   }
   
   .table-paginate{
@@ -506,7 +522,7 @@
     font-size: 14px;
     font-weight: 500;
     border-bottom: 1px solid #e0e0e0;
-    grid-template-columns: 50px 1fr 120px 120px 120px;
+    grid-template-columns: 50px 1fr 1fr 120px 120px 120px;
     font-family: var(--font-family);
   }
   .table-product-body {
@@ -518,7 +534,7 @@
     padding: 0.6rem 0;
     color: #6a727a;
     background-color: #f1f1f1;
-    grid-template-columns: 50px 1fr 120px 120px 120px;
+    grid-template-columns: 50px 1fr 1fr 120px 120px 120px;
     font-family: var(--font-family);
   }
   
@@ -539,6 +555,3 @@
       width: 100%;
     }
   }
-  
-  
-  

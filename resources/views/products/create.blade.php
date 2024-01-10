@@ -44,6 +44,8 @@
             <div class="titlebar">
                 <h1></h1>
                 <button>Save</button>
+                {{-- button for back --}}
+                <a href="{{ route('products.index') }}"><button>Back</button></a>
             </div>
         </form>
     </section>

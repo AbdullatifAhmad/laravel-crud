@@ -33,7 +33,7 @@
                 <div>
                     <ul class="table-filter-list">
                         <li>
-                            <p class="table-filter-link link-active">All</p>
+                            <a href="{{ route('products.index')}}" class="table-filter-link link-active">All</a>
                         </li>
                     </ul>
                 </div>
@@ -56,6 +56,7 @@
             <div class="table-product-head">
                 <p>Image</p>
                 <p>Name</p>
+                <p>Description</p>
                 <p>Category</p>
                 <p>Price</p>
                 
@@ -66,8 +67,10 @@
                     @foreach ($products as $product)
                         <img src="{{asset('images/' . $product->image)}}"/>
                         <p>{{$product->name}}</p>
+                        <p>{{$product->description}}</p>
                         <p>{{$product->category}}</p>
                         <p>{{$product->price}}</p>
+                        
                         
                         <div>     
                             <a href="{{ route('products.edit', $product->id)}}" class="btn-link btn btn-success" style="padding-top: 4px;padding-bottom: 4px">
@@ -93,6 +96,7 @@
         </div>
     </section>
 </main>
+
 <script>
     window.deleteConfirm = function (e) {
         e.preventDefault();

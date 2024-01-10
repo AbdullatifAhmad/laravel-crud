@@ -31,6 +31,7 @@ class ProductController extends Controller
 
     public function store(Request $request)
     {
+        // make here a if condition for button back
         $request->validate([
             'name' => 'required',
             'description' => 'required',
